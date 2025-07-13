@@ -3,75 +3,193 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Simple Web Page</title>
+    <title>Bug Report: [Brief Description]</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            max-width: 800px;
-            margin: 0 auto;
-            color: #333;
+        :root {
+            --primary-color: #2867B2; /* LinkedIn blue */
+            --secondary-color: #f5f5f5;
+            --text-color: #333;
+            --light-text: #666;
+            --border-color: #ddd;
         }
-        header {
-            background-color: #f4f4f4;
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            max-width: 900px;
+            margin: 0 auto;
             padding: 20px;
-            text-align: center;
+        }
+        
+        header {
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+        
+        .meta {
+            color: var(--light-text);
+            font-size: 0.9em;
             margin-bottom: 20px;
         }
-        nav {
-            background-color: #333;
-            color: white;
-            padding: 10px;
+        
+        section {
+            margin-bottom: 30px;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        nav a {
-            color: white;
-            margin-right: 15px;
-            text-decoration: none;
+        
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 5px;
+            margin-top: 0;
         }
+        
+        .severity {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.8em;
+            margin-left: 10px;
+        }
+        
+        .high {
+            background-color: #ffebee;
+            color: #c62828;
+        }
+        
+        .medium {
+            background-color: #fff8e1;
+            color: #ff8f00;
+        }
+        
+        .low {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+        }
+        
+        pre {
+            background-color: var(--secondary-color);
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        
+        .screenshot {
+            max-width: 100%;
+            border: 1px solid var(--border-color);
+            margin: 10px 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
         footer {
-            text-align: center;
-            margin-top: 20px;
-            padding: 10px;
-            background-color: #f4f4f4;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            color: var(--light-text);
+            font-size: 0.9em;
+        }
+        
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            
+            section {
+                padding: 15px;
+            }
         }
     </style>
-    <script async="async" data-cfasync="false" src="//pl26162343.profitableratecpm.com/c44c00000a10c0145e93187182641347/invoke.js"></script>
-    <div id="container-c44c00000a10c0145e93187182641347"></div>
 </head>
 <body>
     <header>
-        <h1>Welcome to My Website</h1>
-        <p>A simple HTML page example</p>
+        <h1>Bug Report: <span id="bug-title">[Brief Description of the Bug]</span></h1>
+        <div class="meta">
+            Reported by: [Your Name] | Date: <span id="report-date">[YYYY-MM-DD]</span> | Status: Open
+        </div>
     </header>
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Contact</a>
-    </nav>
-    <main>
-        <section>
-            <h2>About This Page</h2>
-            <p>This is a simple HTML web page with basic structure and styling.</p>
-        </section>
-
-        <section>
-            <h2>Sample Content</h2>
-            <p>You can replace this with your own content. HTML is easy to learn and use for creating web pages.</p>
-            <ul>
-                <li>List item 1</li>
-                <li>List item 2</li>
-                <li>List item 3</li>
-            </ul>
-        </section>
-    </main>
-    <script async="async" data-cfasync="false" src="//pl26162343.profitableratecpm.com/c44c00000a10c0145e93187182641347/invoke.js"></script>
-    <div id="container-c44c00000a10c0145e93187182641347"></div>
-
+    
+    <section id="overview">
+        <h2>Overview</h2>
+        <p>A clear, concise description of what the bug is. Explain what you expected to happen versus what actually happened.</p>
+    </section>
+    
+    <section id="details">
+        <h2>Technical Details <span class="severity high">High Severity</span></h2>
+        
+        <h3>Environment</h3>
+        <ul>
+            <li>Device: [e.g., MacBook Pro, iPhone 12]</li>
+            <li>OS: [e.g., macOS 12.4, iOS 15.5]</li>
+            <li>Browser: [e.g., Chrome 103, Safari 15.4]</li>
+            <li>App Version: [if applicable]</li>
+        </ul>
+        
+        <h3>Steps to Reproduce</h3>
+        <ol>
+            <li>Step 1</li>
+            <li>Step 2</li>
+            <li>Step 3</li>
+            <li>Observe the error</li>
+        </ol>
+        
+        <h3>Actual Result</h3>
+        <p>What actually happens when you follow the steps above.</p>
+        
+        <h3>Expected Result</h3>
+        <p>What you expected to happen instead.</p>
+    </section>
+    
+    <section id="evidence">
+        <h2>Evidence</h2>
+        
+        <h3>Screenshots</h3>
+        <!-- Replace with actual image paths -->
+        <img src="screenshot1.png" alt="Bug screenshot" class="screenshot">
+        <p class="caption">Caption explaining the screenshot</p>
+        
+        <h3>Error Logs</h3>
+        <pre><code>[Paste relevant error logs or stack traces here]</code></pre>
+    </section>
+    
+    <section id="analysis">
+        <h2>Analysis</h2>
+        <p>Any additional technical analysis or thoughts about what might be causing the issue. This could include:</p>
+        <ul>
+            <li>Potential root causes</li>
+            <li>Related components that might be affected</li>
+            <li>Patterns you've noticed (does it only happen at certain times, etc.)</li>
+        </ul>
+    </section>
+    
+    <section id="impact">
+        <h2>Impact Assessment</h2>
+        <p>Describe how this bug affects users or business operations. Include:</p>
+        <ul>
+            <li>How many users are affected?</li>
+            <li>What's the business impact?</li>
+            <li>Are there any workarounds?</li>
+        </ul>
+    </section>
+    
     <footer>
-        <p>&copy; 2023 My Simple Website. All rights reserved.</p>
+        <p>This bug report is part of my public documentation on software quality. Connect with me on <a href="https://www.linkedin.com/in/yourprofile/" target="_blank">LinkedIn</a> to discuss software testing and quality assurance.</p>
+        <p>Documentation generated on [date].</p>
     </footer>
+
+    <script>
+        // Simple script to auto-fill the current date
+        document.getElementById('report-date').textContent = new Date().toISOString().split('T')[0];
+    </script>
 </body>
 </html>
